@@ -72,6 +72,6 @@ Read `member 1/REQUIREMENTS_AUDIT.md` before interpreting any result: its data c
 
 Restored large data files stay inside their archives; do not upload expanded vendor CSVs or the `work/` folders.
 
-## AI assistance
+## AI disclosure
 
 We used AI tools to assist with data collection, code structure and drafting. We remain responsible for interpreting the results and for their final verification.
