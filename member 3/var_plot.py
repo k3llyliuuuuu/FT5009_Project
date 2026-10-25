@@ -1,4 +1,5 @@
 """Part 5b (step 3, figures): VaR forecasts against realised net returns, and dollar VaR."""
+from datetime import timedelta
 from rolling_volatility import OUT, STRATEGIES, LABELS, COLORS, plt   # also sets up matplotlib
 import pandas as pd
 
@@ -23,7 +24,8 @@ def plot_pct(table):
         ax.scatter(beyond.forecast_date, beyond.actual_net_return*100, s=18, marker='x',
                    color='black', zorder=3, label=f'Loss beyond VaR ({len(beyond)})')
         for d in f.forecast_date[gap]:
-            ax.axvspan(d, d + pd.Timedelta(days=1), color='#f2b134', alpha=.4, lw=0)
+            start = d.to_pydatetime()                                # avoid pandas/NumPy timedelta warnings
+            ax.axvspan(start, start + timedelta(days=1), color='#f2b134', alpha=.4, lw=0)
         ax.axhline(0, color='black', lw=.5)
         ax.set_title(f'{LABELS[s]}  ({int(gap.sum())} coverage-gap sessions shaded)')
         ax.set_ylabel('% of previous NAV')
