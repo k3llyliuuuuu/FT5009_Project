@@ -71,3 +71,7 @@ Read `member 1/REQUIREMENTS_AUDIT.md` before interpreting any result: its data c
 - Benchmark: State Street SPDR Straits Times Index ETF (ES3) NAV and distribution history, used as a total-return proxy.
 
 Restored large data files stay inside their archives; do not upload expanded vendor CSVs or the `work/` folders.
+
+## AI assistance
+
+We used AI tools to assist with data collection, code structure and drafting. We remain responsible for interpreting the results and for their final verification.
